@@ -5,3 +5,7 @@
 /src/.vs/dotnet-design-patterns
 /src/dotnet-design-patterns/bin/Debug/net6.0
 /src/dotnet-design-patterns/obj
+/src/AbstractFactory/bin/Debug/net6.0
+/src/AbstractFactory/obj
+/src/Startup/bin/Debug/net6.0
+/src/Startup/obj
