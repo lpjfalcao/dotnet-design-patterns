@@ -6,22 +6,29 @@ using System.Threading.Tasks;
 
 namespace AbstractFactoryPattern.Banking.Products.Contas
 {
-    public class ContaPoupanca : IConta
+    public class ContaPoupancaPJ : Conta
     {
-        public void Depositar(decimal valor)
+        public ContaPoupancaPJ(decimal saldo)
+        {
+            SaldoAtual = saldo;
+        }
+
+        public override void Depositar(decimal valor)
         {
             Console.WriteLine("Depositando {0:C}", valor);
+            SaldoAtual += valor;
         }
 
-        public void Retirar(decimal valor)
+        public override void Retirar(decimal valor)
         {
             Console.WriteLine("Retirando {0:C}", valor);
+            SaldoAtual -= valor;
         }
 
-        public decimal Saldo()
+        public override decimal Saldo()
         {
             Console.WriteLine("Recuperando saldo...");
-            return 1255.32M;
+            return SaldoAtual;
         }
     }
 }

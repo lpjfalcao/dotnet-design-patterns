@@ -1,9 +1,11 @@
 ﻿namespace AbstractFactoryPattern.Banking.Products.Contas
 {
-    public interface IConta
+    public abstract class Conta
     {
-        void Depositar(decimal valor);
-        void Retirar(decimal valor);
-        decimal Saldo();
+        public decimal SaldoAtual { get; set; }
+
+        public abstract void Depositar(decimal valor);
+        public abstract void Retirar(decimal valor);
+        public abstract decimal Saldo();
     }
 }
