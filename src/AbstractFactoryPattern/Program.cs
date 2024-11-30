@@ -8,7 +8,7 @@ namespace AbstractFactoryPattern
     {
         static void Main(string[] args)
         {
-            ToolKitAbstractFactory factory = new LinuxToolKitFactory();
+            ToolKitAbstractFactory factory = LinuxToolKitFactory.GetInstance();
 
             Button linuxButton = factory.CreateButton("Eu sou um botão no estilo do Linux");
             Window linuxWindow = factory.CreateWindow(100, 100);
