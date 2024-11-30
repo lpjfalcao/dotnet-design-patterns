@@ -9,3 +9,5 @@
 /src/AbstractFactory/obj
 /src/Startup/bin/Debug/net6.0
 /src/Startup/obj
+/src/AbstractFactoryPattern/bin/Debug/net6.0
+/src/AbstractFactoryPattern/obj
