@@ -1,28 +1,27 @@
-﻿namespace AbstractFactoryPattern.Banking.Products.Contas.PF
+﻿using AbstractFactoryPattern.Banking.Strategies;
+
+namespace AbstractFactoryPattern.Banking.Products.Contas.PF
 {
     public class ContaCorrentePF : Conta
     {
-        public ContaCorrentePF(decimal saldo)
+        public ContaCorrentePF(decimal saldo) : base(new TransacaoGenericaStrategy())
         {
             SaldoAtual = saldo;
         }
 
         public override void Depositar(decimal valor)
         {
-            Console.WriteLine("Depositando {0:C}", valor);
-            SaldoAtual += valor;
+            TransacaoStrategy.Depositar(valor, this);
         }
 
         public override void Retirar(decimal valor)
         {
-            Console.WriteLine("Retirando {0:C}", valor);
-            SaldoAtual -= valor;
+            TransacaoStrategy.Retirar(valor, this);
         }
 
         public override decimal Saldo()
         {
-            Console.WriteLine("Recuperando saldo...");
-            return SaldoAtual;
+            return TransacaoStrategy.Saldo(this);
         }
     }
 }
