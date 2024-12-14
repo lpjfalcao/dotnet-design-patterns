@@ -12,3 +12,6 @@
 /src/AbstractFactoryPattern/bin/Debug/net6.0
 /src/AbstractFactoryPattern/obj
 /src/.vs/DesignPatterns/v17
+/src/.vs
+/src/Builder/bin/Debug/net6.0
+/src/Builder/obj
